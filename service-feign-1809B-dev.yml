@@ -3,13 +3,21 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
-server:
-  port: 8084
+
 spring:
   application:
-    name: service-feign555
-  zipkin:
-    base-url: http://localhost:9411   
+    name: service-feign
+ribbon:
+  eureka:
+    enabled: true
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+  port: 8084
 feign:
-    hystrix:
-        enabled: true
+  hystrix:
+    enabled: true
+
