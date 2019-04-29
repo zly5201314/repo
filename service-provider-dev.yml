@@ -4,13 +4,23 @@ server:
 spring:
   application:
     name: service-provider
-  zipkin:
-    base-url: http://localhost:9411
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zly?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
 
-  instance:
-      lease-renewal-interval-in-seconds: 1
-      lease-expiration-duration-in-seconds: 2
+mybatis:
+  config-locations: classpath:mybatis/confg.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.jk.model
+
+
+
