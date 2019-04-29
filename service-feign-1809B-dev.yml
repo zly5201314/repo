@@ -6,7 +6,7 @@ eureka:
 
 spring:
   application:
-    name: service-feign
+    name: service-feign66
 ribbon:
   eureka:
     enabled: true
