@@ -16,7 +16,7 @@ ribbon:
     prefix: classpath:/templates/
     suffix: .html
 server:
-  port: 8084
+  port: 8086
 feign:
   hystrix:
     enabled: true
